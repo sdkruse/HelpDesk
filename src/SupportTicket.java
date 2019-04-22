@@ -35,7 +35,7 @@ public class SupportTicket implements Comparable<SupportTicket> {
     
   //runtime polymorphism
     if(dif == 0)
-      dif = this.toString().compareTo(ticket.toString());
+      dif = this.toString().compareToIgnoreCase(ticket.toString());
       
     
     
