@@ -8,20 +8,24 @@ public class HelpDeskTestSuite {
     
     SupportTicket ticket = new SupportTicket("Test");
     SupportTicket ticketOther = new SupportTicket("Test");
+    SupportTicket aTicket = new SupportTicket("A");
+    SupportTicket bTicket = new SupportTicket("B");
     SupportTicket anotherTicket = new SupportTicket("Another Test");
     
     String messageTest = ticket.toString();
-    String messageTestTwo = anotherTicket.toString();
+    String messageTestTwo = ticketOther.toString();
     
-    if(messageTest.equals("Test"))
+    if(messageTest.equals(messageTestTwo))
       passed++;
     
     if(ticket.compareTo(ticketOther) == 0)
       passed++;
     if(ticket.compareTo(anotherTicket) < 0)
       passed++;
+    if(aTicket.compareTo(bTicket) < 0)
+      passed++;
       
-      if(passed == 3)
+      if(passed == 4)
         pass = true;
     
     
